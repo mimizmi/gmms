@@ -1,0 +1,52 @@
+# Site settings
+title: GMMS
+email: google@kwTeam.com
+description: >- 
+  awesome website written by kw
+baseurl: "" # the subpath of your site, if applicable
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima # Choose an appropriate theme or remove if you have a custom one
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - web.config # Excluding your IIS configuration file since it's not needed for Jekyll build
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# If you want to customize error pages through Jekyll:
+# Custom error pages
+permalink: /:path/
+defaults:
+  - scope:
+      path: "404.html"
+    values:
+      layout: "error"
+  - scope:
+      path: "500.html"
+    values:
+      layout: "error"
